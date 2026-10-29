@@ -78,19 +78,217 @@ export const CHALLENGES: readonly Preset[] = [
 
 /** Starting points only: every template is copied into the list and can be edited */
 export const TEMPLATES: readonly Template[] = [
-  { id: "day-hike", name: "Day hike", items: ["Waterproof jacket", "Warm layer", "Walking boots", "Map and compass", "Phone and power bank", "Water (1.5 L)", "Lunch and snacks", "Hat and gloves", "Sun cream", "First aid kit", "Head torch", "Whistle"] },
-  { id: "camping", name: "Camping", items: ["Tent, poles and pegs", "Sleeping bag", "Sleeping mat", "Pillow", "Stove and gas", "Lighter", "Pan, mug and spork", "Water bottle and filter", "Head torch", "Warm layers", "Toiletries and towel", "Rubbish bag", "Toilet roll and trowel", "First aid kit"] },
-  { id: "swim", name: "Swim (pool or open water)", items: ["Swimsuit", "Goggles", "Swim cap", "Towel", "Flip-flops", "Padlock or £1 coin", "Shampoo", "Tow float (open water)", "Changing robe (open water)", "Warm drink (open water)"] },
-  { id: "gym", name: "Gym bag", items: ["Trainers", "Shorts or leggings", "Top", "Water bottle", "Towel", "Headphones", "Padlock", "Membership card", "Shower kit", "Snack"] },
-  { id: "run-race", name: "Race day (run)", items: ["Race number and pins", "Timing chip", "Running shoes", "Race kit", "Watch charged", "Gels", "Vaseline", "Throwaway layer", "Post-race clothes", "Cash and card"] },
-  { id: "bike-ride", name: "Bike ride", items: ["Helmet", "Lights (front and rear)", "Spare tube", "Tyre levers", "Pump or CO2", "Multi-tool", "Water bottles", "Snacks", "Rain jacket", "Lock", "Phone and card"] },
-  { id: "team-match", name: "Match day (team sport)", items: ["Kit and socks", "Boots or court shoes", "Shin pads / gum shield", "Water bottle", "Subs or match fee", "Towel", "Spare laces", "Snack"] },
-  { id: "climbing", name: "Climbing", items: ["Shoes", "Harness", "Chalk bag", "Belay device and screwgate", "Helmet", "Water", "Tape", "Snacks"] },
-  { id: "beach", name: "Beach day", items: ["Swimwear", "Towel", "Sun cream", "Sunglasses", "Hat", "Water", "Snacks", "Windbreak", "Bag for wet things", "Bucket and spade"] },
-  { id: "festival", name: "Festival", items: ["Ticket", "Tent and sleeping bag", "Wellies", "Waterproof", "Power bank", "Wet wipes", "Toilet roll", "Ear plugs", "Sun cream", "Reusable cup", "Cash and card"] },
-  { id: "ski", name: "Ski trip", items: ["Ski jacket and trousers", "Base layers", "Gloves", "Goggles", "Helmet", "Neck warmer", "Ski socks", "Sun cream and lip balm", "Lift pass", "Insurance details"] },
-  { id: "holiday", name: "Holiday abroad", items: ["Passport", "Tickets and boarding passes", "Travel insurance", "Bank card and currency", "Adapter plug", "Chargers", "Medication", "Toiletries", "Sunglasses", "Clothes for each day"] },
-  { id: "day-out-kids", name: "Day out with kids", items: ["Nappies and wipes", "Change of clothes", "Snacks", "Water bottles", "Sun cream", "Hats", "Plasters", "Entertainment for the car", "Raincoats"] },
+  {
+    id: "day-hike",
+    name: "Day hike",
+    items: [
+      "Waterproof jacket",
+      "Warm layer",
+      "Walking boots",
+      "Map and compass",
+      "Phone and power bank",
+      "Water (1.5 L)",
+      "Lunch and snacks",
+      "Hat and gloves",
+      "Sun cream",
+      "First aid kit",
+      "Head torch",
+      "Whistle",
+    ],
+  },
+  {
+    id: "camping",
+    name: "Camping",
+    items: [
+      "Tent, poles and pegs",
+      "Sleeping bag",
+      "Sleeping mat",
+      "Pillow",
+      "Stove and gas",
+      "Lighter",
+      "Pan, mug and spork",
+      "Water bottle and filter",
+      "Head torch",
+      "Warm layers",
+      "Toiletries and towel",
+      "Rubbish bag",
+      "Toilet roll and trowel",
+      "First aid kit",
+    ],
+  },
+  {
+    id: "swim",
+    name: "Swim (pool or open water)",
+    items: [
+      "Swimsuit",
+      "Goggles",
+      "Swim cap",
+      "Towel",
+      "Flip-flops",
+      "Padlock or £1 coin",
+      "Shampoo",
+      "Tow float (open water)",
+      "Changing robe (open water)",
+      "Warm drink (open water)",
+    ],
+  },
+  {
+    id: "gym",
+    name: "Gym bag",
+    items: [
+      "Trainers",
+      "Shorts or leggings",
+      "Top",
+      "Water bottle",
+      "Towel",
+      "Headphones",
+      "Padlock",
+      "Membership card",
+      "Shower kit",
+      "Snack",
+    ],
+  },
+  {
+    id: "run-race",
+    name: "Race day (run)",
+    items: [
+      "Race number and pins",
+      "Timing chip",
+      "Running shoes",
+      "Race kit",
+      "Watch charged",
+      "Gels",
+      "Vaseline",
+      "Throwaway layer",
+      "Post-race clothes",
+      "Cash and card",
+    ],
+  },
+  {
+    id: "bike-ride",
+    name: "Bike ride",
+    items: [
+      "Helmet",
+      "Lights (front and rear)",
+      "Spare tube",
+      "Tyre levers",
+      "Pump or CO2",
+      "Multi-tool",
+      "Water bottles",
+      "Snacks",
+      "Rain jacket",
+      "Lock",
+      "Phone and card",
+    ],
+  },
+  {
+    id: "team-match",
+    name: "Match day (team sport)",
+    items: [
+      "Kit and socks",
+      "Boots or court shoes",
+      "Shin pads / gum shield",
+      "Water bottle",
+      "Subs or match fee",
+      "Towel",
+      "Spare laces",
+      "Snack",
+    ],
+  },
+  {
+    id: "climbing",
+    name: "Climbing",
+    items: [
+      "Shoes",
+      "Harness",
+      "Chalk bag",
+      "Belay device and screwgate",
+      "Helmet",
+      "Water",
+      "Tape",
+      "Snacks",
+    ],
+  },
+  {
+    id: "beach",
+    name: "Beach day",
+    items: [
+      "Swimwear",
+      "Towel",
+      "Sun cream",
+      "Sunglasses",
+      "Hat",
+      "Water",
+      "Snacks",
+      "Windbreak",
+      "Bag for wet things",
+      "Bucket and spade",
+    ],
+  },
+  {
+    id: "festival",
+    name: "Festival",
+    items: [
+      "Ticket",
+      "Tent and sleeping bag",
+      "Wellies",
+      "Waterproof",
+      "Power bank",
+      "Wet wipes",
+      "Toilet roll",
+      "Ear plugs",
+      "Sun cream",
+      "Reusable cup",
+      "Cash and card",
+    ],
+  },
+  {
+    id: "ski",
+    name: "Ski trip",
+    items: [
+      "Ski jacket and trousers",
+      "Base layers",
+      "Gloves",
+      "Goggles",
+      "Helmet",
+      "Neck warmer",
+      "Ski socks",
+      "Sun cream and lip balm",
+      "Lift pass",
+      "Insurance details",
+    ],
+  },
+  {
+    id: "holiday",
+    name: "Holiday abroad",
+    items: [
+      "Passport",
+      "Tickets and boarding passes",
+      "Travel insurance",
+      "Bank card and currency",
+      "Adapter plug",
+      "Chargers",
+      "Medication",
+      "Toiletries",
+      "Sunglasses",
+      "Clothes for each day",
+    ],
+  },
+  {
+    id: "day-out-kids",
+    name: "Day out with kids",
+    items: [
+      "Nappies and wipes",
+      "Change of clothes",
+      "Snacks",
+      "Water bottles",
+      "Sun cream",
+      "Hats",
+      "Plasters",
+      "Entertainment for the car",
+      "Raincoats",
+    ],
+  },
 ];
 
 export const presetById = (id: string | undefined) => CHALLENGES.find((c) => c.id === id);
@@ -105,7 +303,10 @@ export function progress(list: List): { done: number; total: number } {
   return { done: items.filter((i) => list.done[i.id]).length, total: items.length };
 }
 
-export function distanceKm(a: { lat: number; lng: number }, b: { lat: number; lng: number }): number {
+export function distanceKm(
+  a: { lat: number; lng: number },
+  b: { lat: number; lng: number }
+): number {
   const rad = (d: number) => (d * Math.PI) / 180;
   const h =
     Math.sin(rad(b.lat - a.lat) / 2) ** 2 +
@@ -116,7 +317,11 @@ export function distanceKm(a: { lat: number; lng: number }, b: { lat: number; ln
 /** Closest items still to do, for lists with locations */
 export function nearestTodo(list: List, from: { lat: number; lng: number }, limit = 5) {
   return itemsOf(list)
-    .flatMap((i) => (i.lat !== undefined && i.lng !== undefined && !list.done[i.id] ? [{ ...i, km: distanceKm(from, { lat: i.lat, lng: i.lng }) }] : []))
+    .flatMap((i) =>
+      i.lat !== undefined && i.lng !== undefined && !list.done[i.id]
+        ? [{ ...i, km: distanceKm(from, { lat: i.lat, lng: i.lng }) }]
+        : []
+    )
     .sort((a, b) => a.km - b.km)
     .slice(0, limit);
 }
@@ -130,7 +335,10 @@ const base = (kind: Kind, name: string): List => ({
   createdAt: new Date().toISOString(),
 });
 
-export const newChallenge = (preset: Preset): List => ({ ...base("challenge", preset.name), presetId: preset.id });
+export const newChallenge = (preset: Preset): List => ({
+  ...base("challenge", preset.name),
+  presetId: preset.id,
+});
 
 export const newPacking = (name: string, template?: Template): List => ({
   ...base("packing", name),

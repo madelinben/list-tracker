@@ -39,13 +39,21 @@ export function ListApp({ beforeExport }: { beforeExport?: BeforeExport }) {
           <ListView
             key={open.id}
             list={open}
-            onChange={(l) => update({ ...data, lists: data.lists.map((x) => (x.id === l.id ? l : x)) })}
+            onChange={(l) =>
+              update({ ...data, lists: data.lists.map((x) => (x.id === l.id ? l : x)) })
+            }
             onBack={() => go(null)}
           />
         ) : (
           <>
             <Home data={data} onChange={update} onOpen={go} />
-            <DataBackup filename="list-tracker.json" data={data} parse={parseLists} onRestore={update} beforeExport={beforeExport} />
+            <DataBackup
+              filename="list-tracker.json"
+              data={data}
+              parse={parseLists}
+              onRestore={update}
+              beforeExport={beforeExport}
+            />
           </>
         )}
       </div>

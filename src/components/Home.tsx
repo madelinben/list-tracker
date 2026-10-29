@@ -1,10 +1,23 @@
 import { Backpack, ChevronRight, ListPlus, Mountain, Plus, Trash2 } from "lucide-react";
 import { useState } from "react";
-import { CHALLENGES, type List, type ListData, newChallenge, newCustom, newPacking, progress, TEMPLATES } from "../lib/lists";
+import {
+  CHALLENGES,
+  type List,
+  type ListData,
+  newChallenge,
+  newCustom,
+  newPacking,
+  progress,
+  TEMPLATES,
+} from "../lib/lists";
 import { Progress } from "./Progress";
 import { card, field, primary } from "./ui";
 
-const KIND_LABEL = { challenge: "Challenge", packing: "Packing list", custom: "List" } satisfies Record<List["kind"], string>;
+const KIND_LABEL = {
+  challenge: "Challenge",
+  packing: "Packing list",
+  custom: "List",
+} satisfies Record<List["kind"], string>;
 
 interface Props {
   data: ListData;
@@ -51,7 +64,8 @@ export function Home({ data, onChange, onOpen }: Props) {
                   <button
                     type="button"
                     onClick={() => {
-                      if (confirm(`Delete ${l.name}?`)) onChange({ ...data, lists: data.lists.filter((x) => x.id !== l.id) });
+                      if (confirm(`Delete ${l.name}?`))
+                        onChange({ ...data, lists: data.lists.filter((x) => x.id !== l.id) });
                     }}
                     aria-label={`Delete ${l.name}`}
                     className="grid size-11 place-items-center rounded-xl text-rose-700 hover:bg-rose-50 focus-visible:outline-2 focus-visible:outline-rose-700"
@@ -103,7 +117,11 @@ export function Home({ data, onChange, onOpen }: Props) {
         <div className="grid gap-2 sm:grid-cols-2">
           <label className="flex flex-col gap-1 text-sm font-semibold">
             Start from
-            <select value={template} onChange={(e) => setTemplate(e.target.value)} className={field}>
+            <select
+              value={template}
+              onChange={(e) => setTemplate(e.target.value)}
+              className={field}
+            >
               {TEMPLATES.map((t) => (
                 <option key={t.id} value={t.id}>
                   {t.name}
@@ -114,7 +132,12 @@ export function Home({ data, onChange, onOpen }: Props) {
           </label>
           <label className="flex flex-col gap-1 text-sm font-semibold">
             Name (optional)
-            <input value={packName} onChange={(e) => setPackName(e.target.value)} placeholder="Snowdon weekend" className={field} />
+            <input
+              value={packName}
+              onChange={(e) => setPackName(e.target.value)}
+              placeholder="Snowdon weekend"
+              className={field}
+            />
           </label>
         </div>
         <button type="submit" className={primary}>
@@ -136,7 +159,13 @@ export function Home({ data, onChange, onOpen }: Props) {
         </h2>
         <label className="flex flex-col gap-1 text-sm font-semibold">
           Name
-          <input value={customName} onChange={(e) => setCustomName(e.target.value)} placeholder="Every lido in London, cathedrals, climbing grades…" className={field} required />
+          <input
+            value={customName}
+            onChange={(e) => setCustomName(e.target.value)}
+            placeholder="Every lido in London, cathedrals, climbing grades…"
+            className={field}
+            required
+          />
         </label>
         <button type="submit" disabled={!customName.trim()} className={primary}>
           <Plus size={16} aria-hidden="true" /> Create list

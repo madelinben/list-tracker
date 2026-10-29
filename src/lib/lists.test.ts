@@ -1,6 +1,17 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { CHALLENGES, itemsOf, nearestTodo, newChallenge, newPacking, presetById, progress, TEMPLATES, toggle, untickAll } from "./lists.ts";
+import {
+  CHALLENGES,
+  itemsOf,
+  nearestTodo,
+  newChallenge,
+  newPacking,
+  presetById,
+  progress,
+  TEMPLATES,
+  toggle,
+  untickAll,
+} from "./lists.ts";
 
 test("hill and activity challenges ship with the app", () => {
   assert.equal(presetById("wainwrights")?.items.length, 214);
